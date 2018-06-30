@@ -7,6 +7,12 @@ require 'open-uri'
 
 class CLI
 
+  def call
+    run
+    display_products
+    goodbye
+  end
+
   def run
     puts "You are viewing the best sellers of Origins"
     puts "Please view the bestsellers of Origins from 3 catagories: 1.SKINCARE, 2.BATH & BODY, 3.MAKEUP"
