@@ -18,7 +18,6 @@ class Scraper
       count +=1
     end
     skincare_product
-      binding.pry
   end
 
   def self.scrape_bath_and_body_page
@@ -33,7 +32,6 @@ class Scraper
       count +=1
     end
     bath_and_body_product
-    binding.pry
   end
 
   def self.scrape_makeup_page
