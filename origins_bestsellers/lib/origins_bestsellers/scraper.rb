@@ -35,6 +35,10 @@ class Scraper
       count +=1
     end
     bath_and_body_product
+<<<<<<< HEAD
+=======
+    binding.pry
+>>>>>>> 87ef420db02f8166f3a4b4cf355c15a1c220b86f
   end
 
   def self.scrape_makeup_page
