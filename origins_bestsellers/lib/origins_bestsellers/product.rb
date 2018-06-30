@@ -1,14 +1,11 @@
 class OriginsBestsellers::Product
 
-  attr_accessor :name, :price, :link, :number_of_reviews
-
+  attr_accessor :name, :price
   @@all = []
 
-  def initialize(name = nil ,price = nil, link = nil, number_of_reviews = "No Reviews")
+  def initialize(name = nil ,price = nil)
     @name = name
     @price = price
-    @link = link
-    @number_of_reviews = number_of_reviews
     @@all << self
   end
 

@@ -49,5 +49,3 @@ class Scraper
   end
 
 end
-
-Scraper.scrape_skincare_page
