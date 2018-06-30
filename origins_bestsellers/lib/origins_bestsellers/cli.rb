@@ -18,15 +18,18 @@ class CLI
       # Scraper.scrape_skincare_page
       product_hash = Product.create_from_product_array(Scraper.scrape_skincare_page)
       @product_array = Product.new(product_hash)
+      display_products(@product_array)
 
     when "2"
       # Scraper.scrape_bath_and_body_page
       product_hash = Product.create_from_product_array(Scraper.scrape_bath_and_body_page)
       @product_array = Product.new(product_hash)
+      display_products(@product_array)
     when "3"
       # Scraper.scrape_makeup_page
       product_hash = Product.create_from_product_array(Scraper.scrape_makeup_page)
       @product_array = Product.new(product_hash)
+      display_products(@product_array)
     when "exit"
       goodbye
     end
