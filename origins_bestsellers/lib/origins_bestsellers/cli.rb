@@ -46,7 +46,7 @@ class CLI
   end
 
 
-  def display_products(@product_array)
+  def display_products
     @product_array.each.with_index(1) do |product, index|
       puts "#{index} - #{product.name} - #{product.price}"
       puts "-----------"
