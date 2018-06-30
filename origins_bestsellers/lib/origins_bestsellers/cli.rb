@@ -12,14 +12,21 @@ class CLI
     puts "Please view the bestsellers of Origins from 3 catagories: 1.SKINCARE, 2.BATH & BODY, 3.MAKEUP"
     puts "Which catagory would you like to see the list of best sellers? Please type in the corresponding number for each catagory or type exit:"
     input = gets.strip
-
+    @product_array = []
     case input
     when "1"
       # Scraper.scrape_skincare_page
+      product_hash = Product.create_from_product_array(Scraper.scrape_skincare_page)
+      @product_array = Product.new(product_hash)
+
     when "2"
       # Scraper.scrape_bath_and_body_page
+      product_hash = Product.create_from_product_array(Scraper.scrape_bath_and_body_page)
+      @product_array = Product.new(product_hash)
     when "3"
       # Scraper.scrape_makeup_page
+      product_hash = Product.create_from_product_array(Scraper.scrape_makeup_page)
+      @product_array = Product.new(product_hash)
     when "exit"
       goodbye
     end
@@ -30,9 +37,10 @@ class CLI
   end
 
 
-  def display_products
-    Pruduct.all.each.with_index(1) do |product, index|
+  def display_products(@product_array)
+    @product_array.each.with_index(1) do |product, index|
       puts "#{index} - #{product.name} - #{product.price}"
+      puts "-----------"
     end
   end
 

@@ -1,3 +1,6 @@
+require_relative '../lib/origins_bestsellers/scraper'
+require_relative '../lib/origins_bestsellers/cli'
+
 class Product
 
   attr_accessor :name, :price

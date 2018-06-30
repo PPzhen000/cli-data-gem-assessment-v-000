@@ -2,6 +2,9 @@ require 'pry'
 require 'nokogiri'
 require 'open-uri'
 
+require_relative '../lib/origins_bestsellers/product'
+require_relative '../lib/origins_bestsellers/cli'
+
 # class OriginsBestsellers::Scraper
 class Scraper
 
