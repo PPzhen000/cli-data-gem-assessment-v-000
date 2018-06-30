@@ -3,9 +3,10 @@ class OriginsBestsellers::Product
   attr_accessor :name, :price
   @@all = []
 
-  def initialize(name = nil ,price = nil)
-    @name = name
-    @price = price
+  def initialize(pruduct_hash)
+    product_hash.each do |attribute, value|
+      self.send("#{attribute}=" ,value)
+    end
     @@all << self
   end
 
